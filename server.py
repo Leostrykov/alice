@@ -150,6 +150,10 @@ def play_game(res, req):
                 res['response']['text'] = 'А вот и не угадал!'
     # увеличиваем номер попытки доля следующего шага
     sessionStorage[user_id]['attempt'] += 1
+    res['buttons'].append({
+        'title': 'Помощь',
+        'hide': True
+    })
 
 
 def get_city(req):
